@@ -1,0 +1,114 @@
+@import './variables';
+#dark-toast {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 40%;
+  z-index: 1000;
+  padding: 5px 10px;
+  background: rgba(29, 29, 29, 0.73);
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  min-width: 100px;
+  pointer-events: none; // 点击穿透
+  i {
+    font-size: 40px;
+    display: block;
+    &.rotate-loop {
+      animation: rotate-loop 1s infinite;
+    }
+  }
+}
+#tuya-alert {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateZ(9998px);
+}
+.tuya-confirm-title,
+.tuya-alert-title {
+  text-align: left;
+  min-height: 16px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.tuya-confirm-content {
+  text-align: left;
+  min-height: 80px;
+  font-size: 14px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.tuya-alert-content {
+  text-align: left;
+  height: 60px;
+  font-size: 14px;
+}
+.tuya-confirm-footer,
+.tuya-alert-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tuya-confirm-footer-cancel,
+.tuya-alert-footer-cancel {
+  height: 30px;
+  min-width: 60px;
+  margin-left: 8px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.tuya-confirm-footer-sub-ok,
+.tuya-confirm-footer-ok,
+.tuya-alert-footer-ok {
+  height: 30px;
+  background-color: $primary;
+  min-width: 60px;
+  padding: 0 6px;
+  border: 1px solid transparent;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+.tuya-confirm-footer-sub-ok {
+  border-color: $primary;
+  margin-right: 8px;
+  background-color: #fff;
+  color: $primary;
+}
+.tuya-confirm-footer-cancel,
+.tuya-confirm-footer-ok:hover,
+.tuya-alert-footer-cancel,
+.tuya-alert-footer-ok:hover {
+  cursor: pointer;
+}
+
+.alert-wrap {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 1000px);
+  width: 360px;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #000;
+  text-align: center;
+  min-width: 100px;
+  min-height: 110px;
+  max-width: 80%;
+  padding-bottom: 8px;
+}

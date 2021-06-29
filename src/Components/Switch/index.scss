@@ -1,0 +1,30 @@
+@import "../../variables";
+.switchWrap {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 26px;
+  box-sizing: border-box;
+  height: 24px;
+  padding: 2px;
+  width: 50px;
+  background: $bg-grey;
+  cursor: pointer;
+  .switchIcon {
+    width: 18px;
+    height: 18px;
+    background: $bg-white;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.09);
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+  &.active {
+    background: $primary;
+  }
+  &.disabled {
+    background: $primary;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
