@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Switch} from 'mobile-comp'
+import {Switch} from 'react-mobile-comp'
 export default ()=>  {
   const [checked, setChecked] = useState(false)
   return (

@@ -7,4 +7,4 @@ nav:
 # Getting Started
 
 Balabala...
-<code  src="./.demos/Switch/index.tsx" />
+

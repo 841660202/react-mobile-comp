@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 // import { Switch, Modal, BottomModal } from 'my-react-library'
 // import 'my-react-library/lib/index.css'
-import { Switch, Button, Toast, Alert} from 'mobile-comp'
+import { Switch, Button, Toast, Alert} from 'react-mobile-comp'
 // import 'ts-comp/dist/styles.css'
 const App = () => {
   const [visible, setVisible] = useState(false)
