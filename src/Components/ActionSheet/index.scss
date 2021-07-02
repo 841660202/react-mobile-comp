@@ -1,0 +1,17 @@
+.checkItemWrap {
+  .checkItem {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-right: 30px;
+  }
+  .checkIcon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+  }
+}

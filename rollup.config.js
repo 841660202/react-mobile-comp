@@ -13,7 +13,7 @@ import copy from 'rollup-plugin-copy';
 
 const getPath = _path => path.resolve(__dirname, _path)
 
-
+console.log('12121')
 const extensions = [
   '.js',
   '.ts',
@@ -48,7 +48,10 @@ export default [
       use: ['sass'],
       plugins: [autoprefixer(), cssnano()],
     }),
-    babel({ exclude: 'node_modules/**' }),
+    babel({
+      exclude: 'node_modules/**',
+      plugins: [ "@babel/plugin-transform-arrow-functions1212", "@babel/plugin-proposal-class-properties" ]
+    }),
     resolve(extensions),
     commonjs(),
     ts({
@@ -65,7 +68,8 @@ export default [
       }),
   ],
 
-  external: ['react',
+  external: [
+    'react',
     'react-dom'
   ],
   },

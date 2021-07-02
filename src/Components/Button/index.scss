@@ -1,10 +1,20 @@
 .button {
-  background-color: #1980ff;
-  color: white;
+  background-color: #f5f6f9;
+  color: #000;
+  min-width: 60px;
 }
 button{
   outline: none;
   border: 0;
   padding: 6px 10px;
   border-radius: 2px;
+}
+
+.primary{
+  background-color: #1980ff;
+  color: #fff;
+}
+.danger{
+  background-color: red;
+  color: #fff;
 }

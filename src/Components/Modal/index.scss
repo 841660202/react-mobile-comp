@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.modalMask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $bg-mask;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.cursorPointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 64px);
+  padding: 10px 32px;
+}
+
+.bottomBoday {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  height: auto;
+  padding-top: 8px;
+}
+.topRadius{
+  padding-top: 32px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}

@@ -1,45 +1,69 @@
 import React, { useState } from 'react'
 // import { Switch, Modal, BottomModal } from 'my-react-library'
-// import 'my-react-library/lib/index.css'
-import { Switch, Button, Toast, Alert} from 'react-mobile-comp'
-// import 'ts-comp/dist/styles.css'
+import 'react-mobile-comp/dist/styles.css'
+import dayjs from 'dayjs'
+import { Modal, Button, Toast, Alert, Date, DatePicker, ActionSheet } from 'react-mobile-comp'
 const App = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [checked, setChecked] = useState(false)
   const handleOpen = () => {
     // Toast.success('hello')
-    Alert.confirm({
-      cancelText:'取消',
-      okText: '确定',
-      content: (
-        <div>
-         12121
-        </div>
-      ),
-      onCancel: () => {
+    // Alert.confirm({
+    //   cancelText:'取消',
+    //   okText: '确定',
+    //   content: (
+    //     <div>
+    //      12121
+    //     </div>
+    //   ),
+    //   onCancel: () => {
 
-      },
-      onConfirm: async () => {
+    //   },
+    //   onConfirm: async () => {
 
-        Alert.close()
-      },
-    })
+    //     Alert.close()
+    //   },
+    // })
     setVisible(true)
   }
   const handleClose = () => {
     setVisible(false)
   }
+  const handleOk = (value) => {
+    console.log(value)
+  }
   return (
-    <div style={{paddingTop: 30, paddingLeft: 20}}>
-      121
-      <Switch checked={checked} onChange={(v)=>setChecked(v)}/>
-      <Button onClick={handleOpen}>按钮 开</Button>
+    <div>
+      {/* 121 */}
+      {/* <Switch checked={checked} onChange={(v)=>setChecked(v)}/> */}
+      {/* <Button onClick={handleOpen}>按钮 开</Button> */}
       {/* <Button onClick={handleClose}>按钮 关</Button> */}
-      {/* <BottomModal visible={visible} onCancel={handleClose}>
-        <div>
-          这是主体内容
-        </div>
-      </BottomModal> */}
+      {/* <DatePicker
+        closable
+        value={dayjs(dayjs().format('YYYY-MM-DD')).valueOf()}
+        onOk={handleOk}
+        visible={visible}
+        onCancel={handleClose}
+        btnsPosition="top">
+      </DatePicker> */}
+      <ActionSheet
+        closable
+        topRadius
+        data={
+          [
+            { label: 'js', value: 'js' },
+            { label: 'js1', value: 'js1' },
+            { label: 'js2', value: 'js2' },
+          ]
+        }
+        value={'js'}
+        onOk={handleOk}
+        visible={visible}
+        onCancel={handleClose}
+        btnsPosition="top"
+      >
+      </ActionSheet>
+      {/* <Date /> */}
     </div>
   );
 }

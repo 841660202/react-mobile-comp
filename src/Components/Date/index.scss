@@ -1,0 +1,114 @@
+.warp {
+  width: 100%;
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.header_text {
+  flex: 1;
+  text-align: center;
+}
+.header_left {
+  width: 30px;
+}
+.header_right {
+  width: 30px;
+}
+.dayWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 34px;
+  margin-top: 12px;
+}
+.dateWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.dayItem {
+  width: 14%;
+  text-align: center;
+}
+.dateItem {
+  box-sizing: border-box;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14%;
+  width: 14%;
+  cursor: pointer;
+  height: 32px;
+}
+
+.dateItem_active {
+  background-color: #4684ff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+}
+.dateItem_text {
+  border-radius: 50%;
+  max-height: 24px;
+  max-width: 24px;
+  text-align: center;
+  width: 24px;
+  box-sizing: border-box;
+  padding: 3px;
+  font-size: 12px;
+}
+.dateItem_text_active {
+  color: red;
+}
+.dateItem_weekend {
+  flex: 1;
+  padding: 6;
+}
+.no_thisMoth {
+  color: #9b9b9b;
+}
+// 阳历
+.solarItem {
+  line-height: 20;
+  height: 20;
+  font-size: 16;
+  width: 20;
+  opacity: 1;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0,0,0,0.45);
+}
+// 农历
+.lunarItem {
+  // flex: 1;
+  // padding: 6;
+  margin-top: 4;
+  margin-bottom: 4;
+}
+.lunarItem_Text {
+  font-size: 9;
+  color: #9b9b9b;
+}
+.dot {
+  width: 4;
+  height: 4;
+  border-radius: 4;
+  // background-color: #4684ff;
+  margin-top: 4;
+}
+.dot_active {
+  background-color: #ffffff;
+}
+.text {
+  color: #999999;
+}

@@ -1,17 +1,23 @@
 // Button.js
 import React from 'react';
-import css from './index.scss';
+import styles from './index.scss';
 import classnames from 'classnames'
+
 interface ButtonProps {
-  children: any;
-  style: any;
-  onClick: () => void
+  children?: any;
+  style?: any;
+  onClick?: () => void;
+  type?: 'primary'| 'default' | 'danger'
 }
 const Button = (props: ButtonProps) => {
-  const { children, style, onClick } = props
+  const { children, style, onClick, type } = props
   return (
     <button
-      className={classnames(css.button)}
+      className={classnames(styles.button, {
+        [styles.default]: type === undefined || 'default' === type,
+        [styles.primary]: "primary" === type,
+        [styles.danger]: 'danger' === type,
+      })}
       style={style}
       onClick={onClick}
     >{children}</button>

@@ -1,0 +1,38 @@
+@import '../../variables';
+.popupWrap{
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+}
+.multiPickerWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.multiItem {
+  flex: 1;
+}
+.middleText {
+  width: 30px;
+  text-align: center;
+}
+.mask {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.title {
+}
