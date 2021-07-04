@@ -3,6 +3,7 @@ import Modal from '../Modal'
 import Date from '../Date'
 import dayjs, { Dayjs } from 'dayjs'
 interface IProps {
+  closable: boolean
   visible: boolean
   btnsPosition?: 'top' | 'bottom'
   value: number
@@ -12,7 +13,7 @@ interface IProps {
   cancelText?: string
 }
 const DatePicker: React.FC<IProps> = props => {
-  const { visible, btnsPosition, value, onCancel, onOk, okText, cancelText } = props
+  const { visible, btnsPosition, value, onCancel, onOk, okText, cancelText, closable } = props
   const [date, setDate] = useState(value)
 
   useEffect(() => {
@@ -36,6 +37,7 @@ const DatePicker: React.FC<IProps> = props => {
       onOk={handleOk}
       okText={okText}
       cancelText={cancelText}
+      closable={closable}
     >
       <Date value={date} onChange={onValueChange}></Date>
     </Modal>

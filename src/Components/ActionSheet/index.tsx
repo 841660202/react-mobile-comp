@@ -61,6 +61,7 @@ const ActionSheet: React.FC<IProps> = props => {
       okText={okText}
       cancelText={cancelText}
       topRadius={topRadius}
+      closable
     >
       <ul className={styles.checkItemWrap}>
         {(_datas || []).map(item => <li
@@ -77,6 +78,7 @@ const ActionSheet: React.FC<IProps> = props => {
             )
           }
         </li>)}
+        <li className={styles.space}></li>
         <li
           onClick={handleCancel}
           className={styles.checkItem}

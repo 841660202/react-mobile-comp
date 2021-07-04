@@ -1,7 +1,7 @@
 import React, { Fragment }  from 'react'
 import styles from './index.scss'
 import ReactDOM from 'react-dom'
-import classnames from 'classnames'
+import classNames from 'classnames'
 let timer: any = null
 class Toast extends React.Component {
   static info(msg: string | "info", timeout: number = 2000) {
@@ -15,7 +15,7 @@ class Toast extends React.Component {
     init()
     setTime(timeout)
     ReactDOM.render(<Fragment>
-      <i className={classnames(styles.icon, styles.iconSuccess)} style={{color: '#00DBB4'}}></i>
+      <i className={classNames(styles.icon, styles.iconSuccess)} style={{color: '#00DBB4'}}></i>
       <div>{msg}</div>
     </Fragment>, document.getElementById('dark-toast'));
   }
@@ -23,7 +23,7 @@ class Toast extends React.Component {
     init()
     setTime(timeout)
     ReactDOM.render(<Fragment>
-      <i className={classnames(styles.icon, styles.iconFail)} style={{color: 'red'}}></i>
+      <i className={classNames(styles.icon, styles.iconFail)} style={{color: 'red'}}></i>
       <div>{msg}</div>
     </Fragment>, document.getElementById('dark-toast'));
   }
@@ -31,7 +31,7 @@ class Toast extends React.Component {
     init()
     setTime(timeout)
     ReactDOM.render(<Fragment>
-      <i className={classnames(styles.icon, styles.iconWarn)} style={{color: 'orange'}}></i>
+      <i className={classNames(styles.icon, styles.iconWarn)} style={{color: 'orange'}}></i>
       <div>{msg}</div>
     </Fragment>, document.getElementById('dark-toast'));
   }
@@ -39,7 +39,7 @@ class Toast extends React.Component {
     init()
     setLoading(status)
     ReactDOM.render(<Fragment>
-      <i className={classnames(styles.icon, styles.iconLoading)}></i>
+      <i className={classNames(styles.icon, styles.iconLoading)}></i>
       <div>{msg}</div>
     </Fragment>, document.getElementById('dark-toast'));
   }

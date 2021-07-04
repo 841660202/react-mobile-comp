@@ -1,7 +1,7 @@
 import React from 'react'
 import dayjs, { Dayjs } from "dayjs";
 import styles from './index.scss'
-import classnames from 'classnames'
+import classNames from 'classnames'
 const Strings = {
     c_dayNames: ["日", "一", "二", "三", "四", "五", "六"],
 }
@@ -149,11 +149,11 @@ class Date extends React.PureComponent<any, any> {
                         (item || []).map((date) => (
                             <>
                                 {
-                                    date && <div key={date.valueOf()} className={classnames(styles.dateItem,)}>
+                                    date && <div key={date.valueOf()} className={classNames(styles.dateItem,)}>
                                         <div
                                             onClick={() => this.handleSelectDay(date)}
                                             className={
-                                                classnames(
+                                                classNames(
                                                     styles.dateItem_text,
                                                     {
                                                         [styles.dateItem_active]: this.state.value === date.valueOf()

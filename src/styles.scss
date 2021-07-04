@@ -1,5 +1,7 @@
 @import './variables';
-@import './reset.scss';
+@import './reset';
+// @import 'rmc-picker/assets/index.css';
+@import './picker';
 #dark-toast {
   position: fixed;
   top: 40%;
@@ -14,6 +16,7 @@
   text-align: center;
   min-width: 100px;
   pointer-events: none; // 点击穿透
+  padding: 10px 0;
   i {
     font-size: 40px;
     display: block;
@@ -38,11 +41,13 @@
   min-height: 16px;
   font-size: 15px;
   margin-bottom: 10px;
+  text-align: center;
+  padding-top: 14px;
 }
 .tuya-confirm-content {
   text-align: left;
   min-height: 80px;
-  font-size: 14px;
+  font-size: 12px;
   max-height: 60vh;
   overflow-y: auto;
 }
@@ -99,11 +104,16 @@
   position: fixed;
   top: 40%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 1000px);
+  transform: translate3d(
+    -50%,
+    -50%,
+    1000px
+  );
   width: 360px;
   background: #fff;
   z-index: 9999;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 15px
+    rgba(0, 0, 0, 0.09);
   padding: 5px 10px;
   border-radius: 5px;
   color: #000;
@@ -113,3 +123,9 @@
   max-width: 80%;
   padding-bottom: 8px;
 }
+// .rmc-picker .rmc-picker-mask {
+//   z-index: auto;
+// }
+// .rmc-picker .rmc-picker-indicator {
+//   z-index: auto;
+// }

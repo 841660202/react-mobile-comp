@@ -1,3 +1,4 @@
+@import '../../variables';
 .checkItemWrap {
   .checkItem {
     height: 40px;
@@ -13,5 +14,10 @@
     height: 20px;
     position: absolute;
     right: 30px;
+  }
+  .space {
+    height: 6px;
+    background-color: $bg-space;
+    width: 100%;
   }
 }

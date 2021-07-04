@@ -23,42 +23,60 @@ const extensions = [
 
 export default [
   {
-  input: [
-    './src/index.ts'
-  ],
+    input: [
+      './src/index.ts'
+    ],
 
-  output: [
-    {
-      name: 'comlib',
-      sourcemap: true,
-      file: './dist/index.js',
-      format: 'umd',
-      globals: {
-        react: 'React',
-       "react-dom": "ReactDOM"
+    output: [
+      {
+        name: 'comlib',
+        sourcemap: true,
+        file: './dist/index.js',
+        format: 'umd',
+        globals: {
+          react: 'React',
+          "react-dom": "ReactDOM",
+          "classnames": "classNames",
+        },
       },
-    },
-  ],
+    ],
 
-  plugins: [
-    peerDepsExternal(),
-    postcss({
-      extract: false,
-      modules: true,
-      use: ['sass'],
-      plugins: [autoprefixer(), cssnano()],
-    }),
-    babel({
-      exclude: 'node_modules/**',
-      plugins: [ "@babel/plugin-transform-arrow-functions1212", "@babel/plugin-proposal-class-properties" ]
-    }),
-    resolve(extensions),
-    commonjs(),
-    ts({
-      tsconfig: getPath('./tsconfig.json'), // 导入本地ts配置
-      extensions
-    }),
-    copy({
+    plugins: [
+      peerDepsExternal(),
+      postcss({
+        extract: false,
+        modules: true,
+        use: ['sass'],
+        plugins: [autoprefixer(), cssnano()],
+      }),
+      babel(
+        {
+          "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+          ],
+          // "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-transform-arrow-functions", "external-helpers"],
+          "plugins": [
+            "@babel/plugin-transform-arrow-functions", // 这个是箭头函数的处理
+            [
+              "@babel/plugin-proposal-decorators",
+              { "legacy": true }
+            ], // 这个是装饰器
+          ],
+          "exclude": ["node_modules/**"]
+        }
+      ),
+      // {
+      //   exclude: 'node_modules/**',
+      //   plugins: ["@babel/plugin-proposal-class-properties", "@babel/plugin-transform-arrow-functions",]
+      // }
+      resolve(extensions),
+      commonjs(),
+      ts({
+        tsconfig: getPath('./tsconfig.json'), // 导入本地ts配置
+        extensions
+      }),
+      copy({
         targets: [
           {
             src: ['src/index.css'],
@@ -66,12 +84,13 @@ export default [
           },
         ],
       }),
-  ],
+    ],
 
-  external: [
-    'react',
-    'react-dom'
-  ],
+    external: [
+      'react',
+      'react-dom',
+      'classnames'
+    ],
   },
   {
     input: 'src/styles.scss',

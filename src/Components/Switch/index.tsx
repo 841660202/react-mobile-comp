@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 import styles from './index.scss'
-import classnames from 'classnames';
+import classNames from 'classnames';
 interface SwitchProps {
   children: any;
   checked: boolean;
@@ -17,12 +17,12 @@ const Switch = (props: SwitchProps) => {
     onChange && onChange(!checked)
   }
   return (
-    <motion.div className={classnames(styles.switchWrap, {
+    <motion.div className={classNames(styles.switchWrap, {
       [styles.active]: checked,
       [styles.disabled]: disabled,
     })} onClick={handleChange}>
       <motion.div
-        className={classnames(styles.switchIcon, {
+        className={classNames(styles.switchIcon, {
           [styles.disabled]: disabled,
         })}
         onClick={handleChange}

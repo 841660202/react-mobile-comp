@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import classnames from 'classnames'
+import classNames from 'classnames'
 import styles from './index.scss'
 import Button from '../Button'
 interface IModalProps {
@@ -52,14 +52,15 @@ const Modal = (props: IModalProps) => {
   return (
     <div
       onClick={handleCloseModal}
-      className={classnames(styles.modalMask, {
+      className={classNames(styles.modalMask, {
         [styles.hide]: !_visible,
         [styles.show]: _visible,
         [styles.cursorPointer]: closable
       })}
-      key={`${_forceRender}`}
-      style={{ zIndex: _zIndex, transform: `translateZ(${_zIndex}px)` }}>
-      <div className={classnames(styles.bottomBoday, {
+      // key={`${_forceRender}`}
+      // style={{ zIndex: _zIndex, transform: `translateZ(${_zIndex}px)` }}
+      >
+      <div className={classNames(styles.bottomBoday, {
         [styles.topRadius]: !!topRadius
       })}>
         {
