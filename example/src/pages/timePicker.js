@@ -24,28 +24,30 @@ const ActionSheetDemo = (props) => {
         <Button type="primary" onClick={handleOpen}>打开</Button>
         <br></br>
         {value}
-        <TimePicker
-          closable
-          topRadius
-          data={
-            [
-              { label: 'js', value: 'js' },
-              { label: 'oc', value: 'oc' },
-              { label: 'swift', value: 'swift' },
-              { label: 'rn', value: 'rn' },
-              { label: 'flutter', value: 'flutter' },
-              { label: 'android', value: 'android' },
-              { label: 'h5', value: 'h5' },
-            ]
-          }
-          suffixs={['时', '分']}
-          value={value}
-          onOk={handleOk}
-          visible={visible}
-          onCancel={handleClose}
-          btnsPosition="top"
-        >
-        </TimePicker>
+        {
+          visible && <TimePicker
+            closable
+            topRadius
+            data={
+              [
+                { label: 'js', value: 'js' },
+                { label: 'oc', value: 'oc' },
+                { label: 'swift', value: 'swift' },
+                { label: 'rn', value: 'rn' },
+                { label: 'flutter', value: 'flutter' },
+                { label: 'android', value: 'android' },
+                { label: 'h5', value: 'h5' },
+              ]
+            }
+            suffixs={['时', '分']}
+            value={value}
+            onOk={handleOk}
+            visible={visible}
+            onCancel={handleClose}
+            btnsPosition="top"
+          >
+          </TimePicker>
+        }
       </div>
     </div>
   );

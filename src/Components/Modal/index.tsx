@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import classNames from 'classnames'
 import styles from './index.scss'
 import Button from '../Button'
@@ -38,17 +38,26 @@ const Modal = (props: IModalProps) => {
     set_Visible(visible || false)
   }, [visible])
 
-  const handleCloseModal = () => {
-    if (closable && onCancel) {
-      onCancel()
-    }
-  }
-  const handleOk = () => {
-    onOk && onOk()
-  }
-  const handleCancel = () => {
-    onCancel && onCancel()
-  }
+  const handleCloseModal = useCallback(
+    () => {
+      if (closable && onCancel) {
+        onCancel()
+      }
+    },
+    [closable,onCancel],
+  )
+  const handleOk = useCallback(
+    () => {
+      onOk && onOk()
+    },
+    [onOk],
+  )
+  const handleCancel = useCallback(
+    () => {
+      onCancel && onCancel()
+    },
+    [onCancel],
+  )
   return (
     <div
       onClick={handleCloseModal}
@@ -57,7 +66,7 @@ const Modal = (props: IModalProps) => {
         [styles.show]: _visible,
         [styles.cursorPointer]: closable
       })}
-      key={`${_forceRender}`}
+      // key={`${_forceRender}`}
       style={{ zIndex: _zIndex, transform: `translateZ(${_zIndex}px)` }}
     >
       <div

@@ -1,38 +1,48 @@
 @import '../../variables';
-.popupWrap{
-  position: fixed;
-  bottom: 0;
-  background-color: #fff;
-  width: 100%;
-}
-.multiPickerWrap {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.multiItem {
-  flex: 1;
-}
-.middleText {
-  width: 30px;
-  text-align: center;
-}
-.mask {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
+
+.modalMask {
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: $bg-mask;
+  // transform: scale(0);
+  // z-index: 999;
 }
-.header {
+.hide {
+  display: none;
+  // transform: scale(0);
+}
+.show {
+  display: block;
+  // transform: scale(1);
+}
+.cursorPointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.footer {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  height: 40px;
-  padding: 0 8px;
+  width: calc(100% - 64px);
+  padding: 10px 32px;
 }
 
-.title {
+.bottomBoday {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  height: auto;
+  padding-top: 8px;
+  // z-index: 1000;
+}
+.topRadius{
+  padding-top: 32px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
