@@ -14,36 +14,38 @@ const ActionSheetDemo = (props) => {
     setValue(value)
     console.log(value)
   }
-  const handleBack =()=>{
+  const handleBack = () => {
     props.history.goBack();
   }
   return (
     <div>
-      <Navigationbar centerText="DataPickerDemo" leftVisible onLeftClick={handleBack}/>
-      <Button type="primary" onClick={handleOpen}>打开</Button>
-      <br></br>
-      {value}
-      <DataPicker
-        closable
-        topRadius
-        data={
-          [
-            { label: 'js', value: 'js' },
-            { label: 'oc', value: 'oc' },
-            { label: 'swift', value: 'swift' },
-            { label: 'rn', value: 'rn' },
-            { label: 'flutter', value: 'flutter' },
-            { label: 'android', value: 'android' },
-            { label: 'h5', value: 'h5' },
-          ]
-        }
-        value={value}
-        onOk={handleOk}
-        visible={visible}
-        onCancel={handleClose}
-        btnsPosition="top"
-      >
-      </DataPicker>
+      <Navigationbar centerText="DataPickerDemo" leftVisible onLeftClick={handleBack} />
+      <div className="pageContent">
+        <Button type="primary" onClick={handleOpen}>打开</Button>
+        <br></br>
+        {value}
+        <DataPicker
+          closable
+          topRadius
+          data={
+            [
+              { label: 'js', value: 'js' },
+              { label: 'oc', value: 'oc' },
+              { label: 'swift', value: 'swift' },
+              { label: 'rn', value: 'rn' },
+              { label: 'flutter', value: 'flutter' },
+              { label: 'android', value: 'android' },
+              { label: 'h5', value: 'h5' },
+            ]
+          }
+          value={value}
+          onOk={handleOk}
+          visible={visible}
+          onCancel={handleClose}
+          btnsPosition="top"
+        >
+        </DataPicker>
+      </div>
     </div>
   );
 }

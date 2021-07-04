@@ -1,16 +1,16 @@
 import React from 'react'
 import { Navigationbar, Item } from 'react-mobile-comp'
 const menus = [
-  { text: 'home', path: '/home' },
-  { text: 'detail', path: '/detail' },
-  { text: 'timePicker', path: '/timePicker' },
-  { text: 'dataPicker', path: '/dataPicker' },
-  { text: 'actionSheet', path: '/actionSheet' },
-  { text: 'date', path: '/date' },
-  { text: 'datePicker', path: '/datePicker' },
-  { text: 'switch', path: '/switch' },
-  { text: 'alert', path: '/alert' },
-  { text: 'toast', path: '/toast' },
+  // { text: 'home', path: '/home' },
+  // { text: 'detail', path: '/detail' },
+  { text: 'TimerPicker', path: '/timePicker' },
+  { text: 'DataPicker', path: '/dataPicker' },
+  { text: 'ActionSheet', path: '/actionSheet' },
+  { text: 'Date', path: '/date' },
+  { text: 'DatePicker', path: '/datePicker' },
+  { text: 'Switch', path: '/switch' },
+  { text: 'Alert', path: '/alert' },
+  { text: 'Toast', path: '/toast' },
 ]
 const Menus = (props) => {
   const handleClick = (item) => {

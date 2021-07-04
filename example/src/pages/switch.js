@@ -4,13 +4,15 @@ import 'react-mobile-comp/dist/styles.css'
 import { Switch, Navigationbar } from 'react-mobile-comp'
 const SwitchDemo = (props) => {
   const [checked, setChecked] = useState(false)
-  const handleBack =()=>{
+  const handleBack = () => {
     props.history.goBack();
   }
   return (
     <div>
-      <Navigationbar centerText="SwitchDemo" leftVisible onLeftClick={handleBack}/>
-      <Switch checked={checked} onChange={(v)=>setChecked(v)}/>
+      <Navigationbar centerText="SwitchDemo" leftVisible onLeftClick={handleBack} />
+      <div className="pageContent">
+        <Switch checked={checked} onChange={(v) => setChecked(v)} />
+      </div>
     </div>
   );
 }

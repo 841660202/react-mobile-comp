@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect, Switch as RouterSwitch } from 'react-router-dom';
-import Menus from './pages/menus'
+import Menus from './menus'
 import Home from './pages/home'
 import Detail from './pages/detail'
 import DataPicker from './pages/dataPicker'

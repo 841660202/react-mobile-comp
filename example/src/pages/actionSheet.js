@@ -14,34 +14,36 @@ const ActionSheetDemo = (props) => {
     setValue(item.value)
     console.log(item)
   }
-  const handleBack =()=>{
+  const handleBack = () => {
     props.history.goBack();
   }
   return (
     <div>
-      <Navigationbar centerText="ActionSheetDemo" leftVisible onLeftClick={handleBack}/>
-      <Button type="primary" onClick={handleOpen}>ActionSheet: {value}</Button>
-      <ActionSheet
-        closable
-        topRadius
-        data={
-          [
-            { label: 'js', value: 'js' },
-            { label: 'oc', value: 'oc' },
-            { label: 'swift', value: 'swift' },
-            { label: 'rn', value: 'rn' },
-            { label: 'flutter', value: 'flutter' },
-            { label: 'android', value: 'android' },
-            { label: 'h5', value: 'h5' },
-          ]
-        }
-        value={value}
-        onChange={handleOk}
-        visible={visible}
-        onCancel={handleClose}
-        btnsPosition="top"
-      >
-      </ActionSheet>
+      <Navigationbar centerText="ActionSheetDemo" leftVisible onLeftClick={handleBack} />
+      <div className="pageContent">
+        <Button type="primary" onClick={handleOpen}>ActionSheet: {value}</Button>
+        <ActionSheet
+          closable
+          topRadius
+          data={
+            [
+              { label: 'js', value: 'js' },
+              { label: 'oc', value: 'oc' },
+              { label: 'swift', value: 'swift' },
+              { label: 'rn', value: 'rn' },
+              { label: 'flutter', value: 'flutter' },
+              { label: 'android', value: 'android' },
+              { label: 'h5', value: 'h5' },
+            ]
+          }
+          value={value}
+          onChange={handleOk}
+          visible={visible}
+          onCancel={handleClose}
+          btnsPosition="top"
+        >
+        </ActionSheet>
+      </div>
     </div>
   );
 }

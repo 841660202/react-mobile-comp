@@ -123,15 +123,17 @@ class Date extends React.PureComponent<any, any> {
         return (
             <div className={styles.warp}>
                 <div className={styles.header}>
-                    <img
-                        src={'https://images.tuyacn.com/rms-static/31f13ef0-8176-11eb-aee8-496f89a27c2f-1615363020895.png'}
-                        style={{ width: 20, height: 20 }}
+                    <div
+                    className={styles.lastMonth}
+                        // src={'https://images.tuyacn.com/rms-static/31f13ef0-8176-11eb-aee8-496f89a27c2f-1615363020895.png'}
+                        // style={{ width: 20, height: 20 }}
                         onClick={this.handleLast.bind(this, curMonth)}
                     />
                     <div className={styles.header_text}>{dayjs(curMonth).format('YYYY年MM月')}</div>
-                    <img
-                        src={'https://images.tuyacn.com/rms-static/31f13ef0-8176-11eb-aee8-496f89a27c2f-1615363020895.png'}
-                        style={{ width: 20, height: 20, transform: 'rotate(-180deg)' }}
+                    <div
+                     className={styles.nextMonth}
+                        // src={'https://images.tuyacn.com/rms-static/31f13ef0-8176-11eb-aee8-496f89a27c2f-1615363020895.png'}
+                        // style={{ width: 20, height: 20, transform: 'rotate(-180deg)' }}
                         onClick={this.handleNext.bind(this, curMonth)}
                     />
                 </div>

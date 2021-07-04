@@ -21,16 +21,18 @@ const DatePickerDemo = (props) => {
   return (
     <div>
       <Navigationbar centerText="DatePickerDemo" leftVisible onLeftClick={handleBack} />
-      <Button onClick={handleOpen} type="primary">按钮 开</Button>
-      <div>value: {dayjs(value).format('YYYY/MM/DD')}</div>
-      <DatePicker
-        closable
-        value={value}
-        onOk={handleOk}
-        visible={visible}
-        onCancel={handleClose}
-        btnsPosition="top">
-      </DatePicker>
+      <div className="pageContent">
+        <Button onClick={handleOpen} type="primary">按钮 开</Button>
+        <div>value: {dayjs(value).format('YYYY/MM/DD')}</div>
+        <DatePicker
+          closable
+          value={value}
+          onOk={handleOk}
+          visible={visible}
+          onCancel={handleClose}
+          btnsPosition="top">
+        </DatePicker>
+      </div>
     </div>
   );
 }

@@ -4,12 +4,12 @@ import { Alert, Navigationbar, Button } from 'react-mobile-comp'
 const AlertDemo = (props) => {
   const handleOpen = (props) => {
     Alert.confirm({
-      cancelText:'取消',
+      cancelText: '取消',
       okText: '确定',
       title: '提示信息',
       content: (
         <div>
-         12121
+          12121
         </div>
       ),
       onCancel: () => {
@@ -28,8 +28,9 @@ const AlertDemo = (props) => {
   return (
     <div>
       <Navigationbar centerText="AlertDemo" leftVisible onLeftClick={handleBack} />
-      <Button onClick={handleOpen}>按钮 关</Button>
-
+      <div className="pageContent">
+        <Button type="primary" onClick={handleOpen}>按钮 关</Button>
+      </div>
     </div>
   );
 }

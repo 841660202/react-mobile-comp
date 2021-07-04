@@ -31,17 +31,18 @@ const ToastDemo = (props) => {
   const handleToast = (value) => {
     Toast.info('hello world')
   }
-  const handleBack =()=>{
+  const handleBack = () => {
     props.history.goBack();
   }
   return (
     <div>
-      <Navigationbar centerText="ToastDemo" leftVisible onLeftClick={handleBack}/>
-      {/* 121 */}
-      {/* <Switch checked={checked} onChange={(v)=>setChecked(v)}/> */}
-      <Button onClick={handleToast} type="primary">按钮 开</Button>
-      {/* <Button onClick={handleClose}>按钮 关</Button> */}
-      {/* <DatePicker
+      <Navigationbar centerText="ToastDemo" leftVisible onLeftClick={handleBack} />
+      <div className="pageContent">
+        {/* 121 */}
+        {/* <Switch checked={checked} onChange={(v)=>setChecked(v)}/> */}
+        <Button onClick={handleToast} type="primary">按钮 开</Button>
+        {/* <Button onClick={handleClose}>按钮 关</Button> */}
+        {/* <DatePicker
         closable
         value={dayjs(dayjs().format('YYYY-MM-DD')).valueOf()}
         onOk={handleOk}
@@ -49,7 +50,8 @@ const ToastDemo = (props) => {
         onCancel={handleClose}
         btnsPosition="top">
       </DatePicker> */}
-      {/* <Date /> */}
+        {/* <Date /> */}
+      </div>
     </div>
   );
 }

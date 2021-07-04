@@ -57,12 +57,14 @@ const Modal = (props: IModalProps) => {
         [styles.show]: _visible,
         [styles.cursorPointer]: closable
       })}
-      // key={`${_forceRender}`}
-      // style={{ zIndex: _zIndex, transform: `translateZ(${_zIndex}px)` }}
-      >
-      <div className={classNames(styles.bottomBoday, {
-        [styles.topRadius]: !!topRadius
-      })}>
+      key={`${_forceRender}`}
+      style={{ zIndex: _zIndex, transform: `translateZ(${_zIndex}px)` }}
+    >
+      <div
+        onClick={e => e.stopPropagation()}
+        className={classNames(styles.bottomBoday, {
+          [styles.topRadius]: !!topRadius
+        })}>
         {
           btnsPosition === 'top' && <div className={styles.footer}>
             <Button onClick={handleCancel}>
