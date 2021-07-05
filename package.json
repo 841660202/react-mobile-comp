@@ -1,10 +1,19 @@
 {
   "name": "react-mobile-comp",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "styles": "dist/styles.css",
+  "author": "chen",
+  "description": "A Simple React Mobile UI",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/841660202/react-mobile-comp.git",
+    "type": "git"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "yarn run rollup -c",
     "start": "yarn run rollup -c -w",
