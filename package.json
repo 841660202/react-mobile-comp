@@ -22,6 +22,7 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "cssnano": "^5.0.6",
     "dayjs": "^1.10.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
     "rollup": "^2.52.3",
@@ -52,5 +53,15 @@
     "*.ts?(x)": [
       "prettier --parser=typescript --write"
     ]
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   }
 }
